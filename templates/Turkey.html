@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Türkiye</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background: #c8102e; color: #fff; padding: 40px 20px; text-align: center; }
+        nav { background: #222; color: #fff; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ffce00; }
+        .container { width: 85%; max-width: 1000px; margin: 30px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box; }
+        .section { margin-bottom: 40px; }
+        h2 { border-bottom: 3px solid #c8102e; padding-bottom: 10px; color: #c8102e; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .info-table th, .info-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f2f2f2; width: 35%; }
+        .image-placeholder { background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #777; border-radius: 5px; }
+        footer { background: #222; color: #fff; text-align: center; padding: 20px; margin-top: 50px; }
+
+        /* --- Modern Reviews Section Styling --- */
+        .reviews-section { border-top: 2px solid #eee; padding-top: 30px; margin-top: 50px; }
+
+        .review-form { background: #fdfdfd; border: 1px solid #eef2f5; padding: 25px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #444; font-size: 0.95rem; }
+
+        .review-form input[type="text"], .review-form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s, box-shadow 0.2s; }
+        .review-form input[type="text"]:focus, .review-form textarea:focus { border-color: #c8102e; outline: none; box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.15); }
+        .review-form textarea { min-height: 120px; resize: vertical; }
+
+        .review-form button[type="submit"] { background: #c8102e; color: white; border: none; padding: 12px 28px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.2s; display: inline-block; }
+        .review-form button[type="submit"]:hover { background: #a00d25; }
+
+        .reviews-container h3 { font-size: 1.3rem; color: #222; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        .review-card { background: #fff; border: 1px solid #e0e6ed; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .review-card:hover { transform: translateY(-2px); }
+
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
+        .review-name { font-weight: bold; color: #c8102e; font-size: 1.05rem; }
+        .review-time { color: #777; font-size: 0.85rem; }
+        .review-text { margin: 0; color: #454545; white-space: pre-line; }
+
+        .empty-review { text-align: center; padding: 30px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 8px; color: #666; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Türkiye</h1>
+    <p>The Bridge Between Europe and Asia</p>
+</header>
+
+<nav>
+    <a href="#facts">Quick Facts</a>
+    <a href="#history">History</a>
+    <a href="#tourism">Must-Visit Spots</a>
+</nav>
+
+<div class="container">
+    <section id="facts" class="section">
+        <h2>General Information</h2>
+        <table class="info-table">
+            <tr><th>Official Name</th><td>Republic of Türkiye</td></tr>
+            <tr><th>Capital City</th><td>Ankara</td></tr>
+            <tr><th>Largest City</th><td>Istanbul</td></tr>
+            <tr><th>Official Language</th><td>Turkish</td></tr>
+            <tr><th>Currency</th><td>Turkish Lira (TRY)</td></tr>
+            <tr><th>Population</th><td>Approx. 85 million</td></tr>
+        </table>
+    </section>
+
+    <section id="history" class="section">
+        <h2>History & Culture</h2>
+        <p>Türkiye is a transcontinental nation with a legacy spanning thousands of years. It was the heart of the <strong>Byzantine</strong> and <strong>Ottoman Empires</strong> before becoming a modern, secular republic in 1923 under the leadership of <strong>Mustafa Kemal Atatürk</strong>.</p>
+        <p>Today, it is known for its "Turkish tea" culture, world-class cuisine (especially its diverse breads and kebabs), and the historic "Turkish stone" or turquoise.</p>
+    </section>
+
+    <section id="tourism" class="section">
+        <h2>Top Tourist Attractions</h2>
+        <ul>
+            <li><strong>Istanbul:</strong> Home to the iconic <a href="https://britannica.com">Hagia Sophia</a> and the bustling Grand Bazaar.</li>
+            <li><strong>Cappadocia:</strong> Famous for its "fairy chimney" rock formations and magical sunrise hot air balloon rides.</li>
+            <li><strong>Pamukkale:</strong> Known as the "Cotton Castle," featuring white travertine terraces filled with mineral-rich thermal waters.</li>
+            <li><strong>Ephesus:</strong> One of the most complete ancient Greco-Roman cities in the Mediterranean.</li>
+        </ul>
+    </section>
+
+    <!-- Wrapped missing section opening tag and unified structure -->
+    <section id="reviews" class="reviews-section">
+        <h2>Visitor Reviews</h2>
+
+        <form method="POST" class="review-form">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Your Review</label>
+                <textarea name="comment" placeholder="Tell us what you loved about Türkiye..." required></textarea>
+            </div>
+
+            <button type="submit">Post Review</button>
+        </form>
+
+        <div class="reviews-container">
+            <h3>All Reviews</h3>
+
+            {% for comment in comments %}
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-name">{{ comment['name'] }}</span>
+                    <span class="review-time">{{ comment['time'] }}</span>
+                </div>
+                <p class="review-text">{{ comment['comment'] }}</p>
+            </div>
+            {% else %}
+            <div class="empty-review">
+                <p>No reviews yet — be the first to share your experience!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Türkiye Information Portal</p>
+</footer>
+</body>
+</html>

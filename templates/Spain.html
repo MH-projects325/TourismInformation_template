@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Spain</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0;
+            color: #333;
+        }
+
+        header {
+            background: #fabd00;
+            color: #c8102e;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 8px solid #c8102e;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        nav {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fabd00;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 3px solid #fabd00;
+            padding-bottom: 10px;
+            color: #c8102e;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .info-table th,
+        .info-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .info-table th {
+            background-color: #fff4d1;
+            width: 35%;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        /* REVIEW SECTION */
+
+        .review-section {
+            margin-top: 40px;
+        }
+
+        .review-subtitle {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .review-form {
+            background: #fff8e7;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #f4d06f;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #c8102e;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: 0.3s ease;
+        }
+
+        .review-form input:focus,
+        .review-form textarea:focus {
+            outline: none;
+            border-color: #fabd00;
+            box-shadow: 0 0 8px rgba(250, 189, 0, 0.4);
+        }
+
+        .review-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .review-form button {
+            background: #c8102e;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .review-form button:hover {
+            background: #a50d26;
+            transform: translateY(-2px);
+        }
+
+        /* REVIEW CARDS */
+
+        .reviews-container h3 {
+            margin-bottom: 20px;
+            color: #c8102e;
+        }
+
+        .review-card {
+            background: white;
+            border-left: 6px solid #fabd00;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .review-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #c8102e;
+        }
+
+        .review-time {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .review-text {
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .empty-review {
+            background: #fff4d1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #666;
+            border: 1px dashed #fabd00;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            nav a {
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .container {
+                width: 92%;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .review-time {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Welcome to Spain (España)</h1>
+    <p>Passion, History, and Sun-Drenched Landscapes</p>
+</header>
+
+<nav>
+    <a href="#facts">Quick Facts</a>
+    <a href="#history">History</a>
+    <a href="#tourism">Famous Landmarks</a>
+    <a href="#reviews">Reviews</a>
+</nav>
+
+<div class="container">
+
+    <!-- FACTS -->
+    <section id="facts" class="section">
+        <h2>General Information</h2>
+
+        <table class="info-table">
+            <tr>
+                <th>Official Name</th>
+                <td>Kingdom of Spain</td>
+            </tr>
+
+            <tr>
+                <th>Capital City</th>
+                <td>Madrid</td>
+            </tr>
+
+            <tr>
+                <th>Largest City</th>
+                <td>Madrid</td>
+            </tr>
+
+            <tr>
+                <th>Official Language</th>
+                <td>Spanish (Castilian)</td>
+            </tr>
+
+            <tr>
+                <th>Currency</th>
+                <td>Euro (EUR)</td>
+            </tr>
+
+            <tr>
+                <th>Population</th>
+                <td>Approx. 49.8 million (2026 est.)</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="section">
+        <h2>History & Culture</h2>
+
+        <p>
+            Spain's history is a rich tapestry of Roman, Visigoth, and Moorish influences.
+            The <strong>Reconquista</strong> led to the unification of the country under
+            the Catholic Monarchs in 1492, the same year
+            <strong>Christopher Columbus</strong> reached the Americas.
+        </p>
+
+        <p>
+            Spanish culture is vibrant and diverse, famous for its
+            <strong>Flamenco</strong> music, world-class football,
+            and the tradition of <em>tapas</em>.
+            It is also home to incredible architecture ranging from Roman aqueducts
+            to the surreal modernism of Antoni Gaudí.
+        </p>
+    </section>
+
+    <!-- TOURISM -->
+    <section id="tourism" class="section">
+        <h2>Top Tourist Attractions</h2>
+
+        <ul>
+            <li>
+                <strong>Sagrada Família (Barcelona):</strong>
+                Gaudí’s unfinished masterpiece and one of the most visited churches in the world.
+            </li>
+
+            <li>
+                <strong>The Alhambra (Granada):</strong>
+                A stunning Moorish palace and fortress complex.
+            </li>
+
+            <li>
+                <strong>Prado Museum (Madrid):</strong>
+                One of the world's premier art galleries.
+            </li>
+
+            <li>
+                <strong>Seville Cathedral:</strong>
+                The largest Gothic cathedral in the world.
+            </li>
+
+            <li>
+                <strong>Park Güell (Barcelona):</strong>
+                A whimsical public park filled with colorful mosaics.
+            </li>
+        </ul>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="review-section">
+
+        <h2>Traveler Reviews</h2>
+
+        <p class="review-subtitle">
+            Share your experience visiting Spain 🇪🇸
+        </p>
+
+        <form method="POST" class="review-form">
+
+            <div class="form-group">
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Your Review</label>
+
+                <textarea
+                    name="comment"
+                    placeholder="Tell us what you loved about Spain..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit">Post Review</button>
+
+        </form>
+
+        <!-- REVIEW LIST -->
+
+        <div class="reviews-container">
+
+            <h3>All Reviews</h3>
+
+            {% for comment in comments %}
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <span class="review-name">
+                        {{ comment['name'] }}
+                    </span>
+
+                    <span class="review-time">
+                        {{ comment['time'] }}
+                    </span>
+
+                </div>
+
+                <p class="review-text">
+                    {{ comment['comment'] }}
+                </p>
+
+            </div>
+
+            {% else %}
+
+            <div class="empty-review">
+                <p>
+                    No reviews yet — be the first to share your experience!
+                </p>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Spain Information Portal</p>
+</footer>
+
+</body>
+</html>

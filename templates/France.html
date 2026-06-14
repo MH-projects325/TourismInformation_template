@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore France</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background: #002395; color: #fff; padding: 40px 20px; text-align: center; border-bottom: 8px solid #ed2939; }
+        nav { background: #222; color: #fff; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ed2939; }
+        .container { width: 85%; max-width: 1000px; margin: 30px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box; }
+        .section { margin-bottom: 40px; }
+        h2 { border-bottom: 3px solid #002395; padding-bottom: 10px; color: #002395; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .info-table th, .info-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f2f2f2; width: 35%; }
+        footer { background: #222; color: #fff; text-align: center; padding: 20px; margin-top: 50px; }
+
+        /* --- Improved Review Section Styling --- */
+        .reviews-section { border-top: 2px solid #eee; padding-top: 30px; margin-top: 50px; }
+        .reviews-section h2 { border-bottom: 3px solid #ed2939; color: #333; }
+
+        .review-form { background: #fdfdfd; border: 1px solid #eef2f5; padding: 25px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #444; font-size: 0.95rem; }
+
+        .review-form input[type="text"], .review-form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s, box-shadow 0.2s; }
+        .review-form input[type="text"]:focus, .review-form textarea :focus { border-color: #002395; outline: none; box-shadow: 0 0 0 3px rgba(0, 35, 149, 0.15); }
+        .review-form textarea { min-height: 120px; resize: vertical; }
+
+        .review-form button[type="submit"] { background: #002395; color: white; border: none; padding: 12px 28px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.2s; display: inline-block; }
+        .review-form button[type="submit"]:hover { background: #001866; }
+
+        .reviews-container h3 { font-size: 1.3rem; color: #222; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        .review-card { background: #fff; border: 1px solid #e0e6ed; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .review-card:hover { transform: translateY(-2px); }
+
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
+        .review-name { font-weight: bold; color: #002395; font-size: 1.05rem; }
+        .review-time { color: #777; font-size: 0.85rem; }
+        .review-text { margin: 0; color: #454545; white-space: pre-line; }
+
+        .empty-review { text-align: center; padding: 30px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 8px; color: #666; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to France (République française)</h1>
+    <p>A Global Hub of Culture, Art, and Gastronomy</p>
+</header>
+
+<nav>
+    <a href="#facts">Quick Facts</a>
+    <a href="#history">History</a>
+    <a href="#tourism">Iconic Landmarks</a>
+</nav>
+
+<div class="container">
+    <section id="facts" class="section">
+        <h2>General Information</h2>
+        <table class="info-table">
+            <tr><th>Official Name</th><td>French Republic</td></tr>
+            <tr><th>Capital City</th><td>Paris</td></tr>
+            <tr><th>Largest City</th><td>Paris</td></tr>
+            <tr><th>Official Language</th><td>French</td></tr>
+            <tr><th>Currency</th><td>Euro (EUR)</td></tr>
+            <tr><th>Population</th><td>Approx. 69 million (2026 estimate)</td></tr>
+        </table>
+    </section>
+
+    <section id="history" class="section">
+        <h2>History & Culture</h2>
+        <p>France is one of the oldest nations in the world, tracing its roots back to the <strong>Gauls</strong> and later the <strong>Franks</strong>, from whom it takes its name. It reached heights of power under <strong>Louis XIV</strong> and was transformed by the <strong>French Revolution</strong> of 1789, which introduced the principles of liberty and equality.</p>
+        <p>It is globally renowned for its <em>haute couture</em>, philosophical Enlightenment legacy, and a culinary tradition that includes over 1,500 varieties of cheese.</p>
+    </section>
+
+    <section id="tourism" class="section">
+        <h2>Top Tourist Attractions</h2>
+        <ul>
+            <li><strong>Eiffel Tower:</strong> The global symbol of France, located in the heart of Paris.</li>
+            <li><strong>The Louvre Museum:</strong> The world's largest and most visited art museum, housing the <em>Mona Lisa</em>.</li>
+            <li><strong>Palace of Versailles:</strong> A masterpiece of 17th-century French art and a former seat of royal power.</li>
+            <li><strong>Mont Saint-Michel:</strong> A stunning medieval abbey perched on a rocky islet in Normandy.</li>
+            <li><strong>French Riviera (Côte d'Azur):</strong> Famous for its glamorous beaches and cities like Nice and Cannes.</li>
+        </ul>
+    </section>
+
+    <!-- Wrapped missing section opening tag and updated styling classes -->
+    <section id="reviews" class="reviews-section">
+        <h2>Visitor Reviews</h2>
+
+        <form method="POST" class="review-form">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Your Review</label>
+                <textarea name="comment" placeholder="Tell us what you loved about France..." required></textarea>
+            </div>
+
+            <button type="submit">Post Review</button>
+        </form>
+
+        <div class="reviews-container">
+            <h3>All Reviews</h3>
+
+            {% for comment in comments %}
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-name">{{ comment['name'] }}</span>
+                    <span class="review-time">{{ comment['time'] }}</span>
+                </div>
+                <p class="review-text">{{ comment['comment'] }}</p>
+            </div>
+            {% else %}
+            <div class="empty-review">
+                <p>No reviews yet — be the first to share your experience!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 France Information Portal</p>
+</footer>
+</body>
+</html>
